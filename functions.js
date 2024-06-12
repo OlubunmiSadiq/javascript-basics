@@ -5,14 +5,22 @@
 */
 
 // CODE HERE
+function helloWorld() {
+  console.log('Hello, World!');
+}
+helloWorld(); // Output: Hello, World!
 
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
-    Write a function called 'jsPro' that returns the string: 'I am a JavaScript pro!'
+  Write a function called 'jsPro' that returns the string: 'I am a JavaScript pro!'
 */
 
-//CODE HERE
+// CODE HERE
+function jsPro() {
+  return 'I am a JavaScript pro!';
+}
+console.log(jsPro()); // Output: I am a JavaScript pro!
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -21,7 +29,11 @@
   Call the function, passing in an argument.
 */
 
-//CODE HERE
+// CODE HERE
+function printName(name) {
+  console.log(name);
+}
+printName('Cameron'); // Output: Cameron
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -33,24 +45,34 @@
   Make sure to call your function and pass in an argument.
 */
 
-//CODE HERE
+// CODE HERE
+function greeting(name) {
+  console.log('Hello, ' + name);
+}
+greeting('Jake'); // Output: Hello, Jake
 
 ////////////////// PROBLEM 5 ////////////////////
 
 /*
-    Write a function called 'compareNums' that takes in 2 parameters,
-    which will be numbers.
-    The function should return the bigger number.
-    If the numbers are the same, just return the number.
+  Write a function called 'compareNums' that takes in 2 parameters,
+  which will be numbers.
+  The function should return the bigger number.
+  If the numbers are the same, just return the number.
 
-    Brownie points if you use something called a ternary statement (only spend significant
-    time on this if you have wiggle room).
+  Brownie points if you use something called a ternary statement (only spend significant
+  time on this if you have wiggle room).
 */
 
-//CODE HERE
+// CODE HERE
+function compareNums(num1, num2) {
+  return num1 >= num2 ? num1 : num2;
+}
+console.log(compareNums(3, 5)); // Output: 5
+console.log(compareNums(10, 7)); // Output: 10
+console.log(compareNums(4, 4)); // Output: 4
 
 /*
-    The following problems are extreme challenges that will require you to do some additional research.
+  The following problems are extreme challenges that will require you to do some additional research.
 */
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -63,30 +85,72 @@
 
   Create a variable called 'nameGreeting' and set it equal to your function invoked
   (called) passing in an argument.
-    - If you're confused about the instructions here, remember that we can store the
-      results (or return) of a function into a variable!
+  - If you're confused about the instructions here, remember that we can store the
+    results (or return) of a function into a variable!
 */
 
-//CODE HERE
+// CODE HERE
+function nameCheck(name) {
+  if (name === 'Steven') {
+    return 'What is up Steven?';
+  } else if (name === 'Bryan') {
+    return 'Hey Bryan!';
+  } else {
+    return `Cool name, ${name}`;
+  }
+}
+
+const nameGreeting = nameCheck('Steven');
+console.log(nameGreeting); // Output: What is up Steven?
 
 ////////////////// PROBLEM 7 ////////////////////
-const namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
+const namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl'];
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
+// CODE HERE
+function printAllNames(names) {
+  for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+  }
+}
+printAllNames(namesArr);
+// Output:
+// Cameron
+// Riley
+// Eric
+// Brenna
+// Karl
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
-    Write an ARROW FUNCTION called weatherCheck that takes in one parameter called 'weather'.
-    If the 'weather' parameter is "sunny", return "What a lovely day!".
-    If the 'weather' parameter is "rainy", return "Time for an umbrella.".
-    If the 'weather' paraemeter is "snowy", return "Hot chocolate sounds delicious."
-    Otherwise, return "Time for a nap."
+  Write an ARROW FUNCTION called weatherCheck that takes in one parameter called 'weather'.
+  If the 'weather' parameter is "sunny", return "What a lovely day!".
+  If the 'weather' parameter is "rainy", return "Time for an umbrella.".
+  If the 'weather' parameter is "snowy", return "Hot chocolate sounds delicious."
+  Otherwise, return "Time for a nap."
 
-    You will have to look up arrow functions in JavaScript to complete this task. Arrow
-    functions are just another way of writing functions.
+  You will have to look up arrow functions in JavaScript to complete this task. Arrow
+  functions are just another way of writing functions.
 */
+
+// CODE HERE
+const weatherCheck = (weather) => {
+  if (weather === 'sunny') {
+    return 'What a lovely day!';
+  } else if (weather === 'rainy') {
+    return 'Time for an umbrella.';
+  } else if (weather === 'snowy') {
+    return 'Hot chocolate sounds delicious.';
+  } else {
+    return 'Time for a nap.';
+  }
+};
+
+console.log(weatherCheck('sunny')); // Output: What a lovely day!
+console.log(weatherCheck('rainy')); // Output: Time for an umbrella.
+console.log(weatherCheck('snowy')); // Output: Hot chocolate sounds delicious.
+console.log(weatherCheck('cloudy')); // Output: Time for a nap.
